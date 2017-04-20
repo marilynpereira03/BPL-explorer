@@ -24,11 +24,11 @@ config.redis.password = '';
 config.cacheTTL = 20; // Time in seconds to store cache in Redis
 
 // Header price tickers, Currency switcher
-config.exchangeRates.enabled = false;         // Exchange rates support (true - enabled, false - disabled)
+config.exchangeRates.enabled = true;         // Exchange rates support (true - enabled, false - disabled)
 config.exchangeRates.updateInterval = 30000; // Interval in ms for checking exchange rates (default: 30 seconds)
 // Configuration for different currency pairs, set false to disable pair
-config.exchangeRates.exchanges.ARK.BTC = 'poloniex';  // ARK/BTC pair, supported: poloniex
-config.exchangeRates.exchanges.ARK.CNY = 'jubi';      // ARK/CNY pair, supported: jubi, bitbays
+config.exchangeRates.exchanges.ARK.BTC = 'bittrex';   // ARK/BTC pair, supported: bittrex
+config.exchangeRates.exchanges.ARK.CNY = 'false';      // ARK/CNY pair, supported: jubi, bitbays
 config.exchangeRates.exchanges.BTC.USD = 'bitfinex';  // BTC/USD pair, supported: bitfinex, bitstamp, btce
 config.exchangeRates.exchanges.BTC.EUR = 'bitstamp';  // BTC/EUR pair, supported: bitstamp, bitmarket
 config.exchangeRates.exchanges.BTC.PLN = 'bitmarket'; // BTC/PLN pair, supported: bitmarket

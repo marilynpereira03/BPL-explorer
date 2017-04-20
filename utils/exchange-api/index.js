@@ -77,6 +77,17 @@ module.exports = function (config) {
                         return cb(null, res.BTC_ARK.last);
                     }
                 }
+            ],
+            'bittrex' : [
+                'Bittrex',
+                'https://bittrex.com/api/v1.1/public/getticker?market=BTC-ARK',
+                function (res, cb) {
+                    if (res.error) {
+                        return cb(res.error);
+                    } else {
+                        return cb(null, res.result.Last);
+                    }
+                }
             ]
         },
         'ARKCNY' : {
