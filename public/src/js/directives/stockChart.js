@@ -34,8 +34,8 @@ angular.module('ark_explorer.tools')
                       fromField: 'btcVolume',
                       toField: 'btcVolume'
                   }, {
-                      fromField: 'liskVolume',
-                      toField: 'liskVolume'
+                      fromField: 'arkVolume',
+                      toField: 'arkVolume'
                   }, {
                       fromField: 'numTrades',
                       toField: 'numTrades'
