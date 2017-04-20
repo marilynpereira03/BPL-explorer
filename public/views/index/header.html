@@ -18,11 +18,11 @@
       </form>
       <div class="status" data-ng-show="blockStatus">
         <span class="height"><strong>Height: </strong> {{blockStatus.height}}</span>
-        <span class="supply">&middot; <strong>Supply: </strong> {{blockStatus.supply | lisk | number:0}}</span>
-        <span class="lisk-nethash">&middot; <strong>Nethash: </strong> {{blockStatus.nethash | nethash}}</span>
+        <span class="supply">&middot; <strong>Supply: </strong> {{blockStatus.supply | ark | number:0}}</span>
+        <span class="ark-nethash">&middot; <strong>Nethash: </strong> {{blockStatus.nethash | nethash}}</span>
   <p>
-        <span class="lisk-btc" data-ng-if="currency.tickers.ARK.BTC"><strong>ARK/BTC: </strong> {{currency.tickers.ARK.BTC || 'N/A'}}</span>
-        <span class="lisk-usd" data-ng-if="currency.tickers.ARK[currency.symbol] || currency.tickers.ARK.USD">&middot; <strong>ARK/{{currency.tickers.ARK[currency.symbol] && currency.symbol !== 'BTC' ? currency.symbol : 'USD'}}: </strong> {{currency.tickers.ARK[currency.symbol] && currency.symbol !== 'BTC' ? (currency.tickers.ARK[currency.symbol] | number:4) : (currency.tickers.ARK.USD | number:4) || 'N/A'}}</span>
+        <span class="ark-btc" data-ng-if="currency.tickers.ARK.BTC"><strong>ARK/BTC: </strong> {{currency.tickers.ARK.BTC || 'N/A'}}</span>
+        <span class="ark-usd" data-ng-if="currency.tickers.ARK[currency.symbol] || currency.tickers.ARK.USD">&middot; <strong>ARK/{{currency.tickers.ARK[currency.symbol] && currency.symbol !== 'BTC' ? currency.symbol : 'USD'}}: </strong> {{currency.tickers.ARK[currency.symbol] && currency.symbol !== 'BTC' ? (currency.tickers.ARK[currency.symbol] | number:4) : (currency.tickers.ARK.USD | number:4) || 'N/A'}}</span>
       </div>
       <ul class="nav navbar-nav navbar-right">
       <li class="dropdown" dropdown data-ng-controller="CurrencyController">
@@ -60,7 +60,7 @@
               <a href="/snapshots" target="_blank">Snapshots</a>
             </li>
 <!--             <li>
-              <a href="https://login.lisk.io" target="_blank">Web Login</a>
+              <a href="https://ark.io" target="_blank">Web Login</a>
             </li> -->
           </ul>
         </li>

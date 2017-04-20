@@ -46,7 +46,7 @@ angular.module('ark_explorer')
           }
       };
   })
-  .filter('lisk', function () {
+  .filter('ark', function () {
       return function (amount) {
           if (isNaN(amount)) {
               return (0).toFixed(8);
@@ -55,9 +55,9 @@ angular.module('ark_explorer')
           }
       };
   })
-  .filter('currency', function (numberFilter, liskFilter) {
+  .filter('currency', function (numberFilter, arkFilter) {
       return function (amount, currency, decimal_places) {
-        var lisk = liskFilter (amount),
+        var ark = arkFilter (amount),
             factor = 1;
 
         if (currency.tickers && currency.tickers.ARK && currency.tickers.ARK[currency.symbol]) {
@@ -71,12 +71,12 @@ angular.module('ark_explorer')
           switch (currency.symbol) {
             case 'ARK':
             case 'BTC':
-              return numberFilter ((lisk * factor), 8).replace (/\.?0+$/, '');
+              return numberFilter ((ark * factor), 8).replace (/\.?0+$/, '');
             default:
-              return numberFilter ((lisk * factor), 2).replace (/\.?0+$/, '');
+              return numberFilter ((ark * factor), 2).replace (/\.?0+$/, '');
           }
         } else {
-          return numberFilter ((lisk * factor), decimal_places);
+          return numberFilter ((ark * factor), decimal_places);
         }
       };
   })
@@ -213,7 +213,7 @@ angular.module('ark_explorer')
               return p.name === name.toLowerCase ();
           });
           if (p) {
-              return $sce.trustAsHtml('<a class="glyphicon glyphicon-user" href="https://forum.lisk.io/viewtopic.php?f=48&t=' + p.topic + '" title="' + _.escape (p.description) + '" target="_blank"></a> ' + name);
+              return $sce.trustAsHtml('<a class="glyphicon glyphicon-user" href="https://forum.ark.io/topic/' + p.topic + '" title="' + _.escape (p.description) + '" target="_blank"></a> ' + name);
           } else {
               return $sce.trustAsHtml(name);
           }

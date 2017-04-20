@@ -41,7 +41,7 @@
                     <a data-ng-href="/block/{{lastBlock.id}}">{{lastBlock.id}}</a>
                   </p>
                   <p class="text-muted">
-                    <span class="lisk">{{lastBlock.totalAmount + lastBlock.totalFee || 0 | currency:currency}} {{currency.symbol}}</span>
+                    <span class="ark">{{lastBlock.totalAmount + lastBlock.totalFee || 0 | currency:currency}} {{currency.symbol}}</span>
                     <span class="num-trans">from {{lastBlock.numberOfTransactions || 0}} transactions</span>
                   </p>
                   <p class="text-muted">{{lastBlock.timestamp | timeAgo}}</p>
@@ -67,7 +67,7 @@
                     <a data-ng-href="/block/{{bestBlock.id}}">{{bestBlock.id}}</a>
                   </p>
                   <p class="text-muted">
-                    <span class="lisk">{{bestBlock.totalAmount + bestBlock.totalFee || 0 | currency:currency}} {{currency.symbol}}</span>
+                    <span class="ark">{{bestBlock.totalAmount + bestBlock.totalFee || 0 | currency:currency}} {{currency.symbol}}</span>
                     <span class="num-trans">from {{bestBlock.numberOfTransactions || 0}} transactions</span>
                   </p>
                   <p class="text-muted">{{bestBlock.timestamp | timeAgo}}</p>
