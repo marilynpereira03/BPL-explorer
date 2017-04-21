@@ -15,10 +15,10 @@ module.exports = function (config) {
                 'Bitfinex',
                 'https://api.bitfinex.com/v1/pubticker/BTCUSD',
                 function (res, cb) {
-                    if (res.message) {
-                        return cb(res.message);
-                    } else {
+                    if (res.last_price) {
                         return cb(null, res.last_price);
+                    } else {
+                        return cb('Unable to get last price on Bitfinex for BTCUSD');
                     }
                 }
             ],
@@ -26,18 +26,22 @@ module.exports = function (config) {
                 'Bitstamp',
                 'https://www.bitstamp.net/api/v2/ticker/btcusd/',
                 function (res, cb) {
-                    return cb(null, res.last);
+                    if (res.last) {
+                        return cb(null, res.last);
+                    } else {
+                        return cb('Unable to get last price on Bitstamp for BTCUSD');
+                    }
                 }
             ],
             'btce' : [
                 'Btc-e',
                 'https://btc-e.com/api/3/ticker/btc_usd',
                 function (res, cb) {
-                  if (res.error) {
-                      return cb(res.error);
-                  } else {
-                      return cb(null, res.btc_usd.last);
-                  }
+                    if (res.btc_usd.last) {
+                        return cb(null, res.btc_usd.last);
+                    } else {
+                        return cb('Unable to get last price on Btc-e for BTCUSD');
+                    }
                 }
             ]
         },
@@ -46,14 +50,22 @@ module.exports = function (config) {
                 'Bitstamp',
                 'https://www.bitstamp.net/api/v2/ticker/btceur/',
                 function (res, cb) {
-                    return cb(null, res.last);
+                    if (res.last) {
+                        return cb(null, res.last);
+                    } else {
+                        return cb('Unable to get last price on Bitstamp for BTCEUR');
+                    }
                 }
             ],
             'bitmarket' : [
                 'Bitmarket',
                 'https://www.bitmarket.pl/json/BTCEUR/ticker.json',
                 function (res, cb) {
-                    return cb(null, res.last);
+                    if (res.last) {
+                        return cb(null, res.last);
+                    } else {
+                        return cb('Unable to get last price on Bitmarket for BTCEUR');
+                    }
                 }
             ]
         },
@@ -62,7 +74,11 @@ module.exports = function (config) {
                 'Bitmarket',
                 'https://www.bitmarket.pl/json/BTCPLN/ticker.json',
                 function (res, cb) {
-                    return cb(null, res.last);
+                    if (res.last) {
+                        return cb(null, res.last);
+                    } else {
+                        return cb('Unable to get last price on Bitmarket for BTCPLN');
+                    }
                 }
             ]
         },
@@ -71,10 +87,10 @@ module.exports = function (config) {
                 'Poloniex',
                 'https://poloniex.com/public?command=returnTicker',
                 function (res, cb) {
-                    if (res.error) {
-                        return cb(res.error);
-                    } else {
+                    if (res.BTC_ARK.last) {
                         return cb(null, res.BTC_ARK.last);
+                    } else {
+                        return cb('Unable to get last price on Poloniex for ARKBTC');
                     }
                 }
             ],
@@ -82,10 +98,10 @@ module.exports = function (config) {
                 'Bittrex',
                 'https://bittrex.com/api/v1.1/public/getticker?market=BTC-ARK',
                 function (res, cb) {
-                    if (res.error) {
-                        return cb(res.error);
-                    } else {
+                    if (res.result.Last) {
                         return cb(null, res.result.Last);
+                    } else {
+                        return cb('Unable to get last price on Bittrex for ARKBTC');
                     }
                 }
             ]
@@ -98,7 +114,7 @@ module.exports = function (config) {
                     if (res.last) {
                         return cb(null, res.last);
                     } else {
-                        return cb('Unable to get last price');
+                        return cb('Unable to get last price on Jubi for ARKCNY');
                     }
                 }
             ],
@@ -106,10 +122,10 @@ module.exports = function (config) {
                 'Bitbays',
                 'https://bitbays.com/api/v1/ticker/?market=ark_cny',
                 function (res, cb) {
-                    if (res.status === 200 && res.message === 'ok' && res.result.last) {
+                    if (res.result.last) {
                         return cb(null, res.result.last);
                     } else {
-                        return cb('Unable to get last price');
+                        return cb('Unable to get last price on Bitbays for ARKCNY');
                     }
                 }
             ]
