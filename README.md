@@ -141,6 +141,7 @@ npm test -- test/api/transactions.js
 ```
 
 ## Authors
+- Rajveer Singh <cyrus19901@gmail.com>
 - Brandon Cook <bcook@blockpool.io>
 - Guillaume Verbal <doweig@ark.io>
 - Mariusz Serek <mariusz@serek.net>
@@ -152,6 +153,7 @@ npm test -- test/api/transactions.js
 
 The MIT License (MIT)
 
+Copyright © 2017 BlockPool
 Copyright © 2017 Ark
 Copyright © 2016-2017 Lisk Foundation
 Copyright © 2015 Crypti
