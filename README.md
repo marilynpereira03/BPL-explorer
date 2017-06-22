@@ -141,7 +141,7 @@ npm test -- test/api/transactions.js
 ```
 
 ## Authors
-- Rajveer Singh <cyrus19901@gmail.com>
+- Raj Singh <rsinhg@blockpool.io>
 - Brandon Cook <bcook@blockpool.io>
 - Guillaume Verbal <doweig@ark.io>
 - Mariusz Serek <mariusz@serek.net>

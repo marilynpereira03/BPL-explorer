@@ -5,12 +5,12 @@ var config = require('./config.global');
 // CONFIGURATION
 // =======================================================================================
 
-config.host = '0.0.0.0'; // Interface to listen on, 0.0.0.0 to listen on all available
-config.port = 6040;      // Port to listen on
+config.host = '192.168.1.5'; // Interface to listen on, 0.0.0.0 to listen on all available
+config.port = 4001;      // Port to listen on
 
 // ARK node
-config.ark.host = '127.0.0.1';
-config.ark.port = 4001;
+config.ark.host = '52.14.240.138';
+config.ark.port = 4000;
 
 // FreeGeoIP server
 config.freegeoip.host = '127.0.0.1';

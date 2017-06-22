@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/"><div class="logo" title="ARK"><img src="/img/logo.png"></div></a>
+      <a class="navbar-brand" href="/"><div class="logo" title="BPL"><img src="/img/BLOCKPOOL_circles_transparency.png" ></div></a>
     </div>
     <div class="valign collapse navbar-collapse" collapse="$root.isCollapsed">
       <form id="search-form" data-ng-controller="SearchController" class="navbar-form navbar-left hidden-xs" role="search" data-ng-submit="search()">
@@ -21,7 +21,7 @@
         <span class="supply">&middot; <strong>Supply: </strong> {{blockStatus.supply | lisk | number:0}}</span>
         <span class="lisk-nethash">&middot; <strong>Nethash: </strong> {{blockStatus.nethash | nethash}}</span>
   <p>
-        <span class="lisk-btc" data-ng-if="currency.tickers.ARK.BTC"><strong>ARK/BTC: </strong> {{currency.tickers.ARK.BTC || 'N/A'}}</span>
+        <span class="lisk-btc" data-ng-if="currency.tickers.ARK.BTC"><strong>BPL/BTC: </strong> {{currency.tickers.ARK.BTC || 'N/A'}}</span>
         <span class="lisk-usd" data-ng-if="currency.tickers.ARK[currency.symbol] || currency.tickers.ARK.USD">&middot; <strong>ARK/{{currency.tickers.ARK[currency.symbol] && currency.symbol !== 'BTC' ? currency.symbol : 'USD'}}: </strong> {{currency.tickers.ARK[currency.symbol] && currency.symbol !== 'BTC' ? (currency.tickers.ARK[currency.symbol] | number:4) : (currency.tickers.ARK.USD | number:4) || 'N/A'}}</span>
       </div>
       <ul class="nav navbar-nav navbar-right">
@@ -31,7 +31,7 @@
         </a>
         <ul class="dropdown-menu" role="menu">
           <li>
-          <a data-ng-click="setCurrency('ARK')" data-ng-class="{active: currency.symbol == 'ARK'}">ARK</a>
+          <a data-ng-click="setCurrency('ARK')" data-ng-class="{active: currency.symbol == 'ARK'}">BPL</a>
           </li>
           <li data-ng-if="currency.tickers.ARK" data-ng-repeat="(key, value) in currency.tickers.ARK">
           <a data-ng-click="setCurrency(key)" data-ng-class="{active: currency.symbol == {{key}}}">{{key}}</a>
