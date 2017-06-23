@@ -83,13 +83,13 @@ The default `config.js` file contains all of the configuration settings for BPL 
 
 #### Top Accounts
 
-To enable Top Accounts functionality, start your ark node (not the explorer) using the following command:
+To enable Top Accounts functionality, start your bpl node (not the explorer) using the following command:
 
 ```
 TOP=true node app.js
 ```
 
-## Managing Ark Explorer
+## Managing Bpl Explorer
 
 To test that Ark Explorer is configured correctly, run the following command:
 
@@ -111,21 +111,21 @@ To stop Explorer after it has been started with `forever`, issue the following c
 
 ## Tests
 
-Before running any tests, please ensure Ark Explorer and Ark Client are configured to run on the Ark Testnet.
+Before running any tests, please ensure Bpl Explorer and Bpl Client are configured to run on the Bpl Testnet.
 
 Replace **config.js** with **config.test** file from the **test** directory:
 
 `cp test/config.test ./config.js`
 
-Replace the **config.json** for the Ark Client the corresponding file under the **test** directory:
+Replace the **config.json** for the Bpl Client the corresponding file under the **test** directory:
 
-`cp test/config_Ark.json  /PATH_TO_Ark_DIR/config.json`
+`cp test/config_Bpl.json  /PATH_TO_Bpl_DIR/config.json`
 
-Then restart the Ark Client (example):
+Then restart the Bpl Client (example):
 
-`bash /PATH_TO_Ark_DIR/Ark.sh reload`
+`bash /PATH_TO_Bpl_DIR/Bpl.sh reload`
 
-Launch Ark Explorer (runs on port 6040):
+Launch Bpl Explorer (runs on port 6040):
 
 `forever start app.js`
 
