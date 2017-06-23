@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ark_explorer.address').controller('AddressController',
+angular.module('bpl_explorer.address').controller('AddressController',
 	function ($scope, $rootScope, $routeParams, $location, $http, addressTxs) {
 		$scope.getAddress = function () {
 			$http.get('/api/getAccount', {

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ark_explorer.tools').service('forgingStatus',
+angular.module('bpl_explorer.tools').service('forgingStatus',
   function ($rootScope, epochStampFilter, roundFilter) {
       return function (delegate) {
           var status = { updatedAt: delegate.blocksAt },

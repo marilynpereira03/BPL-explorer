@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ark_explorer.system').factory('addressTxs',
+angular.module('bpl_explorer.system').factory('addressTxs',
   function ($http, $q) {
       return function (address, direction) {
           var lessMore = new LessMore($http, $q, {

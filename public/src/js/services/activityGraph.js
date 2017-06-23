@@ -229,7 +229,7 @@ ActivityGraph.prototype.addAccount = function (id) {
 };
 
 ActivityGraph.prototype.amount = function (tx, sign) {
-    return (sign + tx.amount / Math.pow(10, 8)) + ' ARK';
+    return (sign + tx.amount / Math.pow(10, 8)) + ' BPL';
 };
 
 ActivityGraph.prototype.addTxSender = function (tx) {
@@ -301,7 +301,7 @@ ActivityGraph.prototype.addBlockTxs = function (block) {
     }
 };
 
-angular.module('ark_explorer.tools').factory('activityGraph',
+angular.module('bpl_explorer.tools').factory('activityGraph',
   function ($socket) {
       return function ($scope) {
           var activityGraph = new ActivityGraph(),

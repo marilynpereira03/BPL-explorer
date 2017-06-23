@@ -74,7 +74,7 @@ module.exports = function (grunt) {
                       'bower_components/font-awesome/css/font-awesome.css',
                       'bower_components/leaflet/dist/leaflet.css',
                       'bower_components/leaflet.markercluster/dist/MarkerCluster.Default.css',
-                      'public/src/css/**/*.css'],
+                      'public/css/custom.css'],
                 dest: 'public/css/main.css'
             }
         },
@@ -199,7 +199,7 @@ module.exports = function (grunt) {
         nggettext_compile: {
             all: {
                 options: {
-                    module: 'ark_explorer'
+                    module: 'bpl_explorer'
                 },
                 files: {
                     'public/src/js/translations.js': ['po/*.po']

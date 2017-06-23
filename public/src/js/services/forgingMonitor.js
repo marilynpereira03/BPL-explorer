@@ -49,7 +49,7 @@ var ForgingMonitor = function (forgingStatus) {
     };
 };
 
-angular.module('ark_explorer.tools').service('forgingMonitor',
+angular.module('bpl_explorer.tools').service('forgingMonitor',
   function (forgingStatus) {
       return new ForgingMonitor(forgingStatus);
   });

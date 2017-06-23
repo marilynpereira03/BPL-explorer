@@ -146,7 +146,7 @@ LessMore.prototype.loadLess = function () {
     this.prevOffset();
 };
 
-angular.module('ark_explorer.system').factory('lessMore',
+angular.module('bpl_explorer.system').factory('lessMore',
   function ($http, $q) {
       return function (params) {
           return new LessMore($http, $q, params);

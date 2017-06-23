@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ark_explorer.tools')
+angular.module('bpl_explorer.tools')
   .directive('forgingStatus', function ($sce) {
       return {
           restrict: 'A',
