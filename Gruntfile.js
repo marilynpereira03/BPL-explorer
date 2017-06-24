@@ -74,7 +74,7 @@ module.exports = function (grunt) {
                       'bower_components/font-awesome/css/font-awesome.css',
                       'bower_components/leaflet/dist/leaflet.css',
                       'bower_components/leaflet.markercluster/dist/MarkerCluster.Default.css',
-                      'public/css/custom.css'],
+                      'public/css/*.css'],
                 dest: 'public/css/main.css'
             }
         },
