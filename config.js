@@ -9,7 +9,8 @@ config.host = '192.168.1.5'; // Interface to listen on, 0.0.0.0 to listen on all
 config.port = 4001;      // Port to listen on
 
 // BPL node
-config.bpl.host = '52.14.240.138';
+config.bpl.host = '52.60.162.121';
+// config.bpl.host = '52.14.240.138';
 config.bpl.port = 4000;
 
 // FreeGeoIP server

@@ -69,7 +69,8 @@ module.exports = function (grunt) {
                 dest: 'public/js/vendors.js'
             },
             css: {
-                src: ['bower_components/amstockchart/amcharts/style.css',
+                src: ['bower_components/Blockpool/custom.css',
+                      'bower_components/amstockchart/amcharts/style.css',
                       'bower_components/bootstrap/dist/css/bootstrap.css',
                       'bower_components/font-awesome/css/font-awesome.css',
                       'bower_components/leaflet/dist/leaflet.css',
