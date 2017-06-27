@@ -119,7 +119,6 @@ a:hover {
   /* Negative indent footer by its height */
   margin: 20px auto -48px;
   /* Pad bottom by footer height */
-  padding: 0 0 75px;
 }
 
 .m10h { margin: 0 10px; }
