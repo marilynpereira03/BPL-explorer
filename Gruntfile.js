@@ -70,6 +70,7 @@ module.exports = function (grunt) {
             },
             css: {
                 src: ['bower_components/Blockpool/custom.css',
+                      'public/src/css/custom.css',
                       'bower_components/amstockchart/amcharts/style.css',
                       'bower_components/bootstrap/dist/css/bootstrap.css',
                       'bower_components/font-awesome/css/font-awesome.css',
