@@ -5,7 +5,7 @@ var config = require('./config.global');
 // CONFIGURATION
 // =======================================================================================
 
-config.host = '192.168.1.5'; // Interface to listen on, 0.0.0.0 to listen on all available
+config.host = 'localhost'; // Interface to listen on, 0.0.0.0 to listen on all available
 config.port = 4001;      // Port to listen on
 
 // BPL node
