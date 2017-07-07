@@ -53,7 +53,7 @@ These programs and resources are required to install and run BPL Explorer
 Clone the BPL Explorer Repository:
 
 ```
-git clone https://github.com/BPLEcosystem/BPL-explorer.git
+git clone https://github.com/blockpool-io/BPL-explorer.git
 cd BPL-explorer
 npm install
 bower install
