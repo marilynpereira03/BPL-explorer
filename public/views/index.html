@@ -26,7 +26,7 @@
           <tr data-ng-repeat='tx in txs track by $index'>
             <td>
               <a data-ng-if="tx.vendorField" class="ellipsis tx-id-list" href="/tx/{{tx.id}}">
-                <span class="glyphicon glyphicon-tag" tooltip="{{tx.vendorField}}" tooltip-placement="right"></span> {{tx.id | smallId}}
+                <span class="glyphicon glyphicon-tag" title="{{tx.vendorField}}"></span> {{tx.id | smallId}}
               </a>
               <a data-ng-if="!tx.vendorField" class="ellipsis tx-id-list" href="/tx/{{tx.id}}">{{tx.id | smallId}}</a>
             </td>
