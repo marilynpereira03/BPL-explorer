@@ -1,12 +1,12 @@
-# Ark Blockchain Explorer
+# BlockPool Blockchain Explorer
 
-Ark Explorer version 0.2.0 works in conjunction with the Ark Core API. It uses Redis for caching data and Freegeoip to parse IP geo-location data.
+BPL Explorer version 0.2.0 works in conjunction with the BPL Core API. It uses Redis for caching data and Freegeoip to parse IP geo-location data.
 
-[![Build Status](https://travis-ci.org/ArkEcosystem/Ark-explorer.svg?branch=development)](https://travis-ci.org/ArkEcosystem/Ark-explorer)
+[![Build Status](https://travis-ci.org/BPLEcosystem/BPL-explorer.svg?branch=development)](https://travis-ci.org/blockpool-io/BPL-explorer)
 
 ## Prerequisites
 
-These programs and resources are required to install and run Ark Explorer
+These programs and resources are required to install and run BPL Explorer
 
 - Nodejs v6.9.2 or higher (<https://nodejs.org/>) -- Nodejs serves as the underlying engine for code execution.
 
@@ -36,11 +36,11 @@ These programs and resources are required to install and run Ark Explorer
 
   `sudo npm install -g grunt`
 
-- Forever (<https://github.com/foreverjs/forever>) -- Forever manages the node processes for Ark Explorer
+- Forever (<https://github.com/foreverjs/forever>) -- Forever manages the node processes for BPL Explorer
 
   `sudo npm install -g forever`
 
-- Git (<https://github.com/git/git>) -- Used for cloning and updating Ark Explorer
+- Git (<https://github.com/git/git>) -- Used for cloning and updating BPL Explorer
 
   `sudo apt-get install -y git`
 
@@ -50,11 +50,11 @@ These programs and resources are required to install and run Ark Explorer
 
 ## Installation Steps
 
-Clone the Ark Explorer Repository:
+Clone the BPL Explorer Repository:
 
 ```
-git clone https://github.com/ArkEcosystem/ark-explorer.git
-cd ark-explorer
+git clone https://github.com/blockpool-io/BPL-explorer.git
+cd BPL-explorer
 npm install
 bower install
 ```
@@ -62,12 +62,12 @@ bower install
 ## Build Steps
 
 #### Frontend
- The frontend must be built with Grunt before starting Ark Explorer. Run the following command to compile the frontend components:
+ The frontend must be built with Grunt before starting BPL Explorer. Run the following command to compile the frontend components:
 
 `grunt compile`
 
 #### Market Watcher
- Candlestick data needs to be initialized prior to starting Ark Explorer. During runtime candlestick data is updated automatically.
+ Candlestick data needs to be initialized prior to starting BPL Explorer. During runtime candlestick data is updated automatically.
 
 To build candlestick data for each exchange run:
 
@@ -79,17 +79,17 @@ To update candlestick data manually run after initialization:
 
 ## Configuration
 
-The default `config.js` file contains all of the configuration settings for Ark Explorer. These options can be modified according to comments included in configuration file.
+The default `config.js` file contains all of the configuration settings for BPL Explorer. These options can be modified according to comments included in configuration file.
 
 #### Top Accounts
 
-To enable Top Accounts functionality, start your ark node (not the explorer) using the following command:
+To enable Top Accounts functionality, start your bpl node (not the explorer) using the following command:
 
 ```
 TOP=true node app.js
 ```
 
-## Managing Ark Explorer
+## Managing Bpl Explorer
 
 To test that Ark Explorer is configured correctly, run the following command:
 
@@ -111,21 +111,21 @@ To stop Explorer after it has been started with `forever`, issue the following c
 
 ## Tests
 
-Before running any tests, please ensure Ark Explorer and Ark Client are configured to run on the Ark Testnet.
+Before running any tests, please ensure Bpl Explorer and Bpl Client are configured to run on the Bpl Testnet.
 
 Replace **config.js** with **config.test** file from the **test** directory:
 
 `cp test/config.test ./config.js`
 
-Replace the **config.json** for the Ark Client the corresponding file under the **test** directory:
+Replace the **config.json** for the Bpl Client the corresponding file under the **test** directory:
 
-`cp test/config_Ark.json  /PATH_TO_Ark_DIR/config.json`
+`cp test/config_Bpl.json  /PATH_TO_Bpl_DIR/config.json`
 
-Then restart the Ark Client (example):
+Then restart the Bpl Client (example):
 
-`bash /PATH_TO_Ark_DIR/Ark.sh reload`
+`bash /PATH_TO_Bpl_DIR/Bpl.sh reload`
 
-Launch Ark Explorer (runs on port 6040):
+Launch Bpl Explorer (runs on port 6040):
 
 `forever start app.js`
 
@@ -141,6 +141,8 @@ npm test -- test/api/transactions.js
 ```
 
 ## Authors
+- Raj Singh <rsinhg@blockpool.io>
+- Brandon Cook <bcook@blockpool.io>
 - Guillaume Verbal <doweig@ark.io>
 - Mariusz Serek <mariusz@serek.net>
 - Isabella Dell <isabella@lightcurve.io>
@@ -151,6 +153,7 @@ npm test -- test/api/transactions.js
 
 The MIT License (MIT)
 
+Copyright © 2017 BlockPool
 Copyright © 2017 Ark
 Copyright © 2016-2017 Lisk Foundation
 Copyright © 2015 Crypti
