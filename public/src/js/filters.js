@@ -4,7 +4,7 @@ function smallId(fullId) {
   return fullId.slice(0, 5) + '...' + fullId.slice(-5)
 }
 
-angular.module('ark_explorer')
+angular.module('bpl-explorer')
   .filter('approval', function () {
       return function (votes) {
           if (isNaN(votes)) {
@@ -46,7 +46,7 @@ angular.module('ark_explorer')
           }
       };
   })
-  .filter('ark', function () {
+  .filter('lisk', function () {
       return function (amount) {
           if (isNaN(amount)) {
               return (0).toFixed(8);
@@ -55,28 +55,28 @@ angular.module('ark_explorer')
           }
       };
   })
-  .filter('currency', function (numberFilter, arkFilter) {
+  .filter('currency', function (numberFilter, liskFilter) {
       return function (amount, currency, decimal_places) {
-        var ark = arkFilter (amount),
+        var lisk = liskFilter (amount),
             factor = 1;
 
-        if (currency.tickers && currency.tickers.ARK && currency.tickers.ARK[currency.symbol]) {
-          factor = currency.tickers.ARK[currency.symbol];
-        } else if (currency.symbol !== 'ARK') {
+        if (currency.tickers && currency.tickers.BPL && currency.tickers.BPL[currency.symbol]) {
+          factor = currency.tickers.BPL[currency.symbol];
+        } else if (currency.symbol !== 'BPL') {
           // Exchange rate not available for current symbol
           return 'N/A';
         }
 
         if (decimal_places === undefined) {
           switch (currency.symbol) {
-            case 'ARK':
+            case 'BPL':
             case 'BTC':
-              return numberFilter ((ark * factor), 8).replace (/\.?0+$/, '');
+              return numberFilter ((lisk * factor), 8).replace (/\.?0+$/, '');
             default:
-              return numberFilter ((ark * factor), 2).replace (/\.?0+$/, '');
+              return numberFilter ((lisk * factor), 2).replace (/\.?0+$/, '');
           }
         } else {
-          return numberFilter ((ark * factor), decimal_places);
+          return numberFilter ((lisk * factor), decimal_places);
         }
       };
   })
@@ -213,7 +213,7 @@ angular.module('ark_explorer')
               return p.name === name.toLowerCase ();
           });
           if (p) {
-              return $sce.trustAsHtml('<a class="glyphicon glyphicon-user" href="https://forum.ark.io/topic/' + p.topic + '" title="' + _.escape (p.description) + '" target="_blank"></a> ' + name);
+              return $sce.trustAsHtml('<a class="glyphicon glyphicon-user" href="https://forum.lisk.io/viewtopic.php?f=48&t=' + p.topic + '" title="' + _.escape (p.description) + '" target="_blank"></a> ' + name);
           } else {
               return $sce.trustAsHtml(name);
           }
