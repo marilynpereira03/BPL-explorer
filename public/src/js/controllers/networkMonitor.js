@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ark_explorer.tools').controller('NetworkMonitor',
+angular.module('bpl-explorer.tools').controller('NetworkMonitor',
   function (networkMonitor, $scope) {
       networkMonitor($scope);
   });
