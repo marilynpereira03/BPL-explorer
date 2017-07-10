@@ -27,7 +27,7 @@ describe('Exchanges API (Market Watcher)', function () {
                     'low',
                     'open',
                     'close',
-                    'arkVolume',
+                    'liskVolume',
                     'btcVolume',
                     'firstTrade',
                     'lastTrade',
