@@ -2,7 +2,7 @@
 
 var ZeroClipboard = window.ZeroClipboard;
 
-angular.module('ark_explorer')
+angular.module('bpl-explorer')
   .directive('clipCopy', function () {
       ZeroClipboard.config({
           moviePath: '/swf/ZeroClipboard.swf',
