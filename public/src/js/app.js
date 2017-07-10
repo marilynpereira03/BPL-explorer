@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ark_explorer',[
+angular.module('bpl-explorer',[
     'ngAnimate',
     'ngResource',
     'ngRoute',
@@ -8,21 +8,21 @@ angular.module('ark_explorer',[
     'ui.bootstrap',
     'gettext',
     'monospaced.qrcode',
-    'ark_explorer.system',
-    'ark_explorer.socket',
-    'ark_explorer.blocks',
-    'ark_explorer.transactions',
-    'ark_explorer.address',
-    'ark_explorer.search',
-    'ark_explorer.tools',
-    'ark_explorer.currency'
+    'bpl-explorer.system',
+    'bpl-explorer.socket',
+    'bpl-explorer.blocks',
+    'bpl-explorer.transactions',
+    'bpl-explorer.address',
+    'bpl-explorer.search',
+    'bpl-explorer.tools',
+    'bpl-explorer.currency'
 ]);
 
-angular.module('ark_explorer.system', []);
-angular.module('ark_explorer.socket', []);
-angular.module('ark_explorer.blocks', []);
-angular.module('ark_explorer.transactions', []);
-angular.module('ark_explorer.address', []);
-angular.module('ark_explorer.search', []);
-angular.module('ark_explorer.tools', ['naturalSort']);
-angular.module('ark_explorer.currency', []);
+angular.module('bpl-explorer.system', []);
+angular.module('bpl-explorer.socket', []);
+angular.module('bpl-explorer.blocks', []);
+angular.module('bpl-explorer.transactions', []);
+angular.module('bpl-explorer.address', []);
+angular.module('bpl-explorer.search', []);
+angular.module('bpl-explorer.tools', ['naturalSort']);
+angular.module('bpl-explorer.currency', []);
