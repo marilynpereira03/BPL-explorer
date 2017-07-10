@@ -16,7 +16,7 @@ app.exchange = new utils.exchange(config);
 app.knownAddresses = new utils.knownAddresses();
 app.knownAddresses.load();
 
-app.set('ark address', 'http://' + config.ark.host + ':' + config.ark.port);
+app.set('bpl address', 'http://' + config.bpl.host + ':' + config.bpl.port);
 app.set('freegeoip address', 'http://' + config.freegeoip.host + ':' + config.freegeoip.port);
 
 ////////////////////////////////////////////////////////////////////////////////
