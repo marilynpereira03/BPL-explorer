@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ark_explorer.tools').controller('MarketWatcher',
+angular.module('bpl-explorer.tools').controller('MarketWatcher',
   function (marketWatcher, $scope) {
       marketWatcher($scope);
   });
