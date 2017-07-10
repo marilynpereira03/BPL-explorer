@@ -1,13 +1,13 @@
 {
-  "name": "ark-explorer",
+  "name": "bpl-explorer",
   "version": "0.2.0",
-  "description": "Ark blockchain explorer",
+  "description": "BPL blockchain explorer",
   "repository": {
     "type": "git",
-    "url": "git@github.com:ArkEcosystem/ark-explorer.git"
+    "url": "git@github.com/blockpool-io/BPL-explorer"
   },
   "private": true,
-  "author": "Boris Povod <boris@crypti.me>, Oliver Beddows <oliver@lightcurve.io>, Mariusz Serek <mariusz@serek.net>, Isabella Dell <isabella@lightcurve.io >, Guillaume Verbal <doweig@ark.io>",
+  "author": "Raj Singh <rsingh@blockpool.io>, Oliver Beddows <oliver@lisk.io>,  Guillaume Verbal <doweig@ark.io>",
   "license": "MIT",
   "main": "app.js",
   "scripts": {
