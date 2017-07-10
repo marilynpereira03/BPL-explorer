@@ -1,11 +1,11 @@
 'use strict';
 
 var config = {};
-config.ark = {};
+config.bpl = {};
 config.freegeoip = {};
 config.redis = {};
 config.proposals = {};
-config.exchangeRates = {exchanges: { ARK: {}, BTC: {}}};
+config.exchangeRates = {exchanges: { BPL: {}, BTC: {}}};
 config.marketWatcher = {exchanges: {}, candles: {}, orders: {}};
 
 module.exports = config;
