@@ -38,7 +38,7 @@ app.orders = new utils.orders(config, client);
 
 app.set('version', '0.3');
 app.set('strict routing', true);
-app.set('ark address', 'http://' + config.ark.host + ':' + config.ark.port);
+app.set('bpl address', 'http://' + config.bpl.host + ':' + config.bpl.port);
 app.set('freegeoip address', 'http://' + config.freegeoip.host + ':' + config.freegeoip.port);
 app.set('exchange enabled', config.exchangeRates.enabled);
 
@@ -171,7 +171,7 @@ async.parallel([
         if (err) {
             console.log(err);
         } else {
-            console.log('ARK started at ' + app.get('host') + ':' + app.get('port'));
+            console.log('BPL started at ' + app.get('host') + ':' + app.get('port'));
 
             var io = require('socket.io').listen(server);
             require('./sockets')(app, io);
