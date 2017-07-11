@@ -42,9 +42,9 @@ var ForgingMonitor = function (forgingStatus) {
             unprocessed += totals.staleStatus || 0;
 
         if (unprocessed > 0) {
-            return (201 - unprocessed);
+            return (51 - unprocessed);
         } else {
-            return 201;
+            return 51;
         }
     };
 };
