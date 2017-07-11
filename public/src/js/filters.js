@@ -96,7 +96,7 @@ angular.module('bpl_explorer')
           if (isNaN(height)) {
               return 0;
           } else {
-              return Math.floor(height / 201) + (height % 201 > 0 ? 1 : 0);
+              return Math.floor(height / 51) + (height % 51 > 0 ? 1 : 0);
           }
       };
   })

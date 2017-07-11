@@ -1,5 +1,5 @@
 <section data-ng-controller="AddressController">
-  <div class="secondary_navbar hidden-xs hidden-sm" scroll data-ng-class="{'hidden': !secondaryNavbar}"
+  <div class="secondary_navbar hidden-xs hidden-sm" scroll data-ng-class="{'hidden': !secondaryNavbar}" 
 data-ng-if="address.balance" data-ng-init="hideSNavbar=0">
     <div class="container" data-ng-if="!hideSNavbar">
       <div class="col-md-8 text-left">
@@ -59,7 +59,7 @@ data-ng-if="address.balance" data-ng-init="hideSNavbar=0">
      <div class="col-md-2 text-center">
 	 <qrcode size="160" data="{{address.address}}"></qrcode>
 	 <br>
-	(Scan for Address)
+	(Scan for Address)     
     </div>
     </div>
     <div class="delegate" data-ng-if="address.delegate">
@@ -75,7 +75,7 @@ data-ng-if="address.balance" data-ng-init="hideSNavbar=0">
                 </tr>
                 <tr>
                   <td><strong>Rank / Status</strong></td>
-                  <td class="text-right">{{address.delegate.rate}} / <span class="text-muted">{{(address.delegate.rate <= 201) ? 'Active' : 'Standby'}}</span></td>
+                  <td class="text-right">{{address.delegate.rate}} / <span class="text-muted">{{(address.delegate.rate <= 51) ? 'Active' : 'Standby'}}</span></td>
                 </tr>
                 <tr>
                   <td><strong>Approval</strong></td>
