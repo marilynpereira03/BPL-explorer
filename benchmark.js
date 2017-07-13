@@ -18,6 +18,7 @@ app.knownAddresses.load();
 
 app.set('bpl address', 'http://' + config.bpl.host + ':' + config.bpl.port);
 app.set('freegeoip address', 'http://' + config.freegeoip.host + ':' + config.freegeoip.port);
+console.log('>>>>>>>>>>>> bpl address',app['bpl address']);
 
 ////////////////////////////////////////////////////////////////////////////////
 
