@@ -9,7 +9,7 @@ config.host = '10.0.0.220'; // Interface to listen on, 0.0.0.0 to listen on all 
 config.port = 4001;      // Port to listen on
 
 // BPL node
-config.bpl.host = '34.211.111.67';
+config.bpl.host = '54.153.35.65';
 // config.bpl.host = '52.14.240.138';
 config.bpl.port = 4000;
 
