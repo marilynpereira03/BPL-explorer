@@ -82,7 +82,7 @@ angular.module('bpl_explorer')
   })
   .filter('nethash', function () {
       return function (nethash) {
-          if (nethash === 'ce6b3b5b28c000fe4b810b843d20b971f316d237d5a9616dbc6f7f1118307fc6') {
+          if (nethash === '8eec6459a5928387d32b99c7ef22b1fcb26dfd8417fa4875f1d05fde18bb6484') {
               return 'Testnet';
           } else if (nethash === '6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988')  {
               return 'Mainnet';
@@ -96,7 +96,7 @@ angular.module('bpl_explorer')
           if (isNaN(height)) {
               return 0;
           } else {
-              return Math.floor(height / 51) + (height % 51 > 0 ? 1 : 0);
+              return Math.floor(height / 201) + (height % 201 > 0 ? 1 : 0);
           }
       };
   })
