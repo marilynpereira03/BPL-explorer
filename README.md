@@ -54,6 +54,7 @@ Clone the BPL Explorer Repository:
 
 ```
 git clone https://github.com/blockpool-io/BPL-explorer.git
+
 cd BPL-explorer
 npm install
 bower install

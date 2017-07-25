@@ -258,11 +258,11 @@
 
           <div class="row forging-progress" data-ng-if="forgingProgress">
             <div class="col-xs-12">
-              <progressbar max="51" type="forging" value="forgingTotals.processed" data-ng-class="{'progress-striped active': forgingTotals.processed < 51,'inactive': forgingTotals.processed == 51}">
+              <progressbar max="201" type="forging" value="forgingTotals.processed" data-ng-class="{'progress-striped active': forgingTotals.processed < 201,'inactive': forgingTotals.processed == 201}">
                 <p data-ng-if="forgingTotals.processed > 5">
-                  <span>{{forgingTotals.processed || 0}} / 51</span>
-                  <span data-ng-if="forgingTotals.processed < 51"><i class="fa fa-cog"></i> Updated</span>
-                  <span data-ng-if="forgingTotals.processed == 51"><i class="fa fa-check-square"></i> Update-to-date</span>
+                  <span>{{forgingTotals.processed || 0}} / 201</span>
+                  <span data-ng-if="forgingTotals.processed < 201"><i class="fa fa-cog"></i> Updated</span>
+                  <span data-ng-if="forgingTotals.processed == 201"><i class="fa fa-check-square"></i> Update-to-date</span>
                 </p>
               </progressbar>
             </div>
@@ -292,7 +292,7 @@
                   <td>{{d.rate}}</td>
                   <td><a data-ng-if="d.proposal" class="glyphicon glyphicon-user proposal-icon" data-ng-href="https://forum.lisk.io/viewtopic.php?f=48&t={{d.proposal.topic}}" title="{{d.proposal.description}}" target="_new"></a> <a data-ng-href="/address/{{d.address}}">{{d.username}}</a></td>
                   <td class="hidden-xs"><span class="text-muted">{{d.address}}</span></td>
-                  <td class="hidden-xs hidden-sm">{{d.forged | currency:currency}} <span class="text-muted">{{currency.symbol}}</span></td>
+                  <td class="hidden-xs hidden-sm">{{d.forged  | currency:currency }} <span class="text-muted">{{currency.symbol}}</span></td>
                   <td class="hidden-xs hidden-sm">{{d.forgingTime | forgingTime}}</td>
                   <td><i forging-status="d.forgingStatus"></i></td>
                   <td>{{d.productivity || 0}}%</td>

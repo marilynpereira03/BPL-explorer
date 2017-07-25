@@ -70,8 +70,9 @@ angular.module('bpl_explorer')
         if (decimal_places === undefined) {
           switch (currency.symbol) {
             case 'BPL':
+              return numberFilter ((lisk * factor), 2).replace (/\.?0+$/, '');
             case 'BTC':
-              return numberFilter ((lisk * factor), 8).replace (/\.?0+$/, '');
+              return numberFilter ((lisk * factor), 2).replace (/\.?0+$/, '');
             default:
               return numberFilter ((lisk * factor), 2).replace (/\.?0+$/, '');
           }
@@ -82,7 +83,7 @@ angular.module('bpl_explorer')
   })
   .filter('nethash', function () {
       return function (nethash) {
-          if (nethash === '8eec6459a5928387d32b99c7ef22b1fcb26dfd8417fa4875f1d05fde18bb6484') {
+          if (nethash === '65525d4bb7237746c034ad00ae86ba1db43d098c471ca8744e2e06a4d831212c') {
               return 'Testnet';
           } else if (nethash === '6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988')  {
               return 'Mainnet';
