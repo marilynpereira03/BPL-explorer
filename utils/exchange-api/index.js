@@ -66,7 +66,7 @@ module.exports = function (config) {
                 }
             ]
         },
-        'ARKBTC' : {
+        'BPLBTC' : {
             'poloniex' : [
                 'Poloniex',
                 'https://poloniex.com/public?command=returnTicker',
@@ -74,15 +74,15 @@ module.exports = function (config) {
                     if (res.error) {
                         return cb(res.error);
                     } else {
-                        return cb(null, res.BTC_ARK.last);
+                        return cb(null, res.BTC_BPL.last);
                     }
                 }
             ]
         },
-        'ARKCNY' : {
+        'BPLCNY' : {
             'jubi' : [
                 'Jubi',
-                'https://www.jubi.com/api/v1/ticker/?coin=ark',
+                'https://www.jubi.com/api/v1/ticker/?coin=bpl',
                 function (res, cb) {
                     if (res.last) {
                         return cb(null, res.last);
@@ -93,7 +93,7 @@ module.exports = function (config) {
             ],
             'bitbays' : [
                 'Bitbays',
-                'https://bitbays.com/api/v1/ticker/?market=ark_cny',
+                'https://bitbays.com/api/v1/ticker/?market=bpl_cny',
                 function (res, cb) {
                     if (res.status === 200 && res.message === 'ok' && res.result.last) {
                         return cb(null, res.result.last);

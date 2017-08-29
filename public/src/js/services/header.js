@@ -23,7 +23,7 @@ var Header = function ($rootScope) {
             $rootScope.currency.tickers = res.tickers;
         }
 
-        // When ticker for user-stored currency is not available - switch to ARK temporarly
+        // When ticker for user-stored currency is not available - switch to BPL temporarly
         if ($rootScope.currency.symbol !== 'BPL' && (!$rootScope.currency.tickers || !$rootScope.currency.tickers.BPL || !$rootScope.currency.tickers.BPL[$rootScope.currency.symbol])) {
             console.log ('Currency ' + $rootScope.currency.symbol + ' not available, fallback to BPL');
             $rootScope.currency.symbol = 'BPL';
