@@ -5,7 +5,7 @@ var config = require('./config.global');
 // CONFIGURATION
 // =======================================================================================
 
-config.host = '13.56.163.57'; // Interface to listen on, 0.0.0.0 to listen on all available
+config.host = 'ec2-13-56-163-57.us-west-1.compute.amazonaws.com'; // Interface to listen on, 0.0.0.0 to listen on all available
 config.port = 4002;      // Port to listen on
 
 // BPL node
