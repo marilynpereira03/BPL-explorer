@@ -67,14 +67,16 @@ module.exports = function (config) {
             ]
         },
         'BPLBTC' : {
-            'poloniex' : [
-                'Poloniex',
-                'https://poloniex.com/public?command=returnTicker',
+            'coinmarketcap' : [
+                'CMC',
+                'https://api.coinmarketcap.com/v1/ticker/blockpool',
                 function (res, cb) {
                     if (res.error) {
                         return cb(res.error);
                     } else {
-                        return cb(null, res.BTC_BPL.last);
+                        
+                        // console.log(res[0]['price_btc']);
+                        return cb(null, res[0]['price_btc']);
                     }
                 }
             ]
