@@ -24,9 +24,9 @@ var Header = function ($rootScope) {
         }
 
         // When ticker for user-stored currency is not available - switch to BPL temporarly
-        if ($rootScope.currency.symbol !== 'BPL' && (!$rootScope.currency.tickers || !$rootScope.currency.tickers.BPL || !$rootScope.currency.tickers.BPL[$rootScope.currency.symbol])) {
-            console.log ('Currency ' + $rootScope.currency.symbol + ' not available, fallback to BPL');
-            $rootScope.currency.symbol = 'BPL';
+        if ($rootScope.currency.symbol !== app.get('currency') && (!$rootScope.currency.tickers || !$rootScope.currency.tickers.BPL || !$rootScope.currency.tickers.BPL[$rootScope.currency.symbol])) {
+            console.log ('Currency ' + $rootScope.currency.symbol + ' not available, fallback to' + app.get('currency'));
+            $rootScope.currency.symbol = app.get('currency');
         }
     };
 

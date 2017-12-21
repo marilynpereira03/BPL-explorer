@@ -218,7 +218,7 @@ module.exports = function (app, connectionHandler, socket) {
         async.waterfall([
             function (callback) {
                 request.get({
-                    url : app.get('bpl address') + '/api/blocks?orderBy=height:desc&limit=' + limit,
+                    url : app.get('address') + '/api/blocks?orderBy=height:desc&limit=' + limit,
                     json : true
                 }, function (err, response, body) {
                     if (err || response.statusCode !== 200) {
@@ -309,7 +309,7 @@ module.exports = function (app, connectionHandler, socket) {
     };
 
     var getRound = function (height) {
-        return Math.floor(height / 201) + (height % 201 > 0 ? 1 : 0);
+        return Math.floor(height / app.get('number of delegates')) + (height % app.get('number of delegates') > 0 ? 1 : 0);
     };
 
     var getRoundDelegates = function (delegates, height) {

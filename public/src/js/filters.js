@@ -83,7 +83,7 @@ angular.module('bpl_explorer')
   })
   .filter('nethash', function () {
       return function (nethash) {
-          if (nethash === 'f9b98b78d2012ba8fd75538e3569bbc071ce27f0f93414218bc34bc72bdeb3db') {
+          if (nethash === '62a562c768271a627888d4c81347240dea00ff7a24e7b66fb5d755de6a22a9c0') {
               return 'Testnet';
           } else if (nethash === '7bfb2815effb43592ccdd4fd0f657c082a7b318eed12f6396cc174d8578293c3')  {
               return 'Mainnet';
@@ -97,7 +97,7 @@ angular.module('bpl_explorer')
           if (isNaN(height)) {
               return 0;
           } else {
-              return Math.floor(height / 201) + (height % 201 > 0 ? 1 : 0);
+              return Math.floor(height / app.get('currency')) + (height % app.get('number of delegates') > 0 ? 1 : 0);
           }
       };
   })

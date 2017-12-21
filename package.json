@@ -1,7 +1,7 @@
 {
-  "name": "bpl-explorer",
-  "version": "0.2.0",
-  "description": "BPL blockchain explorer",
+  "name": "explorer",
+  "version": "1.2.0",
+  "description": "Blockchain explorer",
   "repository": {
     "type": "git",
     "url": "git@github.com/blockpool-io/BPL-explorer"

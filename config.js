@@ -9,8 +9,8 @@ config.host = '0.0.0.0'; // Interface to listen on, 0.0.0.0 to listen on all ava
 config.port = 9031;      // Port to listen on
 
 // BPL node
-config.bpl.host = '13.56.163.57';
-config.bpl.port = 9030;
+config.node.host = '138.68.183.82';
+config.node.port = 9032;
 
 // FreeGeoIP server
 config.freegeoip.host = '127.0.0.1';

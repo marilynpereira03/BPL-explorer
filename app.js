@@ -38,7 +38,9 @@ app.orders = new utils.orders(config, client);
 
 app.set('version', '0.3');
 app.set('strict routing', true);
-app.set('bpl address', 'http://' + config.bpl.host + ':' + config.bpl.port);
+app.set('number of delegates', 51);
+app.set('currency','WBX')
+app.set('address', 'http://' + config.node.host + ':' + config.node.port);
 app.set('freegeoip address', 'http://' + config.freegeoip.host + ':' + config.freegeoip.port);
 app.set('exchange enabled', config.exchangeRates.enabled);
 
