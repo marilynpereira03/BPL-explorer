@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('bpl_explorer.transactions').controller('TransactionsController',
+angular.module('explorer.transactions').controller('TransactionsController',
   function ($scope, $rootScope, $routeParams, $location, $http) {
       $scope.getTransaction = function () {
           $http.get('/api/getTransaction', {

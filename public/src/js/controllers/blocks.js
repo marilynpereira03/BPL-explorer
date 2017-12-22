@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('bpl_explorer.blocks').controller('BlocksController',
+angular.module('explorer.blocks').controller('BlocksController',
   function ($scope, $rootScope, $routeParams, $location, $http, blockTxs) {
       $scope.getLastBlocks = function (n) {
           var offset = 0;

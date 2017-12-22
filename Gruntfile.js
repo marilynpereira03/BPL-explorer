@@ -201,7 +201,7 @@ module.exports = function (grunt) {
         nggettext_compile: {
             all: {
                 options: {
-                    module: 'bpl_explorer'
+                    module: 'explorer'
                 },
                 files: {
                     'public/src/js/translations.js': ['po/*.po']

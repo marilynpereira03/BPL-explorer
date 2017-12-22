@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('bpl_explorer')
+angular.module('explorer')
   .directive('whenScrolled', function ($window) {
       return {
           restric: 'A',

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('bpl_explorer.tools').controller('DelegateMonitor',
+angular.module('explorer.tools').controller('DelegateMonitor',
   function (delegateMonitor, orderBy, $scope, $rootScope, $http) {
       delegateMonitor($scope);
 

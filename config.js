@@ -8,7 +8,7 @@ var config = require('./config.global');
 config.host = '0.0.0.0'; // Interface to listen on, 0.0.0.0 to listen on all available
 config.port = 9031;      // Port to listen on
 
-// BPL node
+// Node
 config.node.host = '138.68.183.82';
 config.node.port = 9032;
 

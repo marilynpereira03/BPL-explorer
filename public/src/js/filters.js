@@ -4,7 +4,7 @@ function smallId(fullId) {
   return fullId.slice(0, 5) + '...' + fullId.slice(-5)
 }
 
-angular.module('bpl_explorer')
+angular.module('explorer')
   .filter('approval', function () {
       return function (votes) {
           if (isNaN(votes)) {
@@ -62,14 +62,14 @@ angular.module('bpl_explorer')
 
         if (currency.tickers && currency.tickers.BPL && currency.tickers.BPL[currency.symbol]) {
           factor = currency.tickers.BPL[currency.symbol];
-        } else if (currency.symbol !== 'BPL') {
+        } else if (currency.symbol !== app.get('currency')) {
           // Exchange rate not available for current symbol
           return 'N/A';
         }
 
         if (decimal_places === undefined) {
           switch (currency.symbol) {
-            case 'BPL':
+            case app.get('currency') :
               return numberFilter ((lisk * factor), 2).replace (/\.?0+$/, '');
             case 'BTC':
               return numberFilter ((lisk * factor), 2).replace (/\.?0+$/, '');

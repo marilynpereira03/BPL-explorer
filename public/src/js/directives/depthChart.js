@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('bpl_explorer.tools')
+angular.module('explorer.tools')
   .directive('depthChart', function ($timeout) {
       function DepthChart (scope, elm, attr) {
           var self = this;

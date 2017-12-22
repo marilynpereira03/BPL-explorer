@@ -173,7 +173,7 @@ async.parallel([
         if (err) {
             console.log(err);
         } else {
-            console.log('BPL started at ' + app.get('host') + ':' + app.get('port'));
+            console.log('Node started at ' + app.get('host') + ':' + app.get('port'));
 
             var io = require('socket.io').listen(server);
             require('./sockets')(app, io);

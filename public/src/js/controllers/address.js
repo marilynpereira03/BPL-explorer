@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('bpl_explorer.address').controller('AddressController',
+angular.module('explorer.address').controller('AddressController',
 	function ($scope, $rootScope, $routeParams, $location, $http, addressTxs) {
 		$scope.getAddress = function () {
 			$http.get('/api/getAccount', {
@@ -8,6 +8,8 @@ angular.module('bpl_explorer.address').controller('AddressController',
 					address: $routeParams.address
 				}
 			}).then(function (resp) {
+				console.log(resp);
+				console.log("*********************");
 				if (resp.data.success) {
 						$scope.address = resp.data;
 				} else {
