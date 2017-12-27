@@ -38,6 +38,10 @@ app.orders = new utils.orders(config, client);
 
 app.set('version', '0.3');
 app.set('strict routing', true);
+app.set('delegates', 51);
+app.set('currency', 'WBX');
+app.set('testnet','b1123a193767577e1256ca6a2bf0bb5d21ac0b8c60a13bf1d98611aee708002d');
+app.set('mainnet','b1123a193767577e1256ca6a2bf0bb5d21ac0b8c60a13bf1d98611aee708002d');
 app.set('bpl address', 'http://' + config.bpl.host + ':' + config.bpl.port);
 app.set('freegeoip address', 'http://' + config.freegeoip.host + ':' + config.freegeoip.port);
 app.set('exchange enabled', config.exchangeRates.enabled);
