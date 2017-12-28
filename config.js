@@ -8,9 +8,9 @@ var config = require('./config.global');
 config.host = '0.0.0.0'; // Interface to listen on, 0.0.0.0 to listen on all available
 config.port = 9031;      // Port to listen on
 
-// BPL node
-config.bpl.host = '165.227.224.117';
-config.bpl.port = 9032;
+//  node
+config.node.host = '165.227.224.117';
+config.node.port = 9032;
 
 // FreeGeoIP server
 config.freegeoip.host = '127.0.0.1';

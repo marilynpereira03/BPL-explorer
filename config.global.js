@@ -1,7 +1,7 @@
 'use strict';
 
 var config = {};
-config.bpl = {};
+config.node = {};
 config.freegeoip = {};
 config.redis = {};
 config.proposals = {};

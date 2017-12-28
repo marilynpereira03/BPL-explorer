@@ -83,7 +83,7 @@ angular.module('bpl_explorer')
   })
   .filter('nethash', function () {
       return function (nethash) {
-          if (nethash === 'f9b98b78d2012ba8fd75538e3569bbc071ce27f0f93414218bc34bc72bdeb3db') {
+          if (nethash === 'b1123a193767577e1256ca6a2bf0bb5d21ac0b8c60a13bf1d98611aee708002d') {
               return 'Testnet';
           } else if (nethash === '7bfb2815effb43592ccdd4fd0f657c082a7b318eed12f6396cc174d8578293c3')  {
               return 'Mainnet';
