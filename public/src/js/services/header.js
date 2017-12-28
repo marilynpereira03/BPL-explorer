@@ -2,7 +2,7 @@
 
 var Header = function ($rootScope) {
     $rootScope.currency = {
-      symbol: 'BPL'
+      symbol: 'WBX'
     };
 
     this.updateBlockStatus = function (res) {
@@ -23,10 +23,10 @@ var Header = function ($rootScope) {
             $rootScope.currency.tickers = res.tickers;
         }
 
-        // When ticker for user-stored currency is not available - switch to BPL temporarly
-        if ($rootScope.currency.symbol !== 'BPL' && (!$rootScope.currency.tickers || !$rootScope.currency.tickers.BPL || !$rootScope.currency.tickers.BPL[$rootScope.currency.symbol])) {
-            console.log ('Currency ' + $rootScope.currency.symbol + ' not available, fallback to BPL');
-            $rootScope.currency.symbol = 'BPL';
+        // When ticker for user-stored currency is not available - switch to WBX temporarly
+        if ($rootScope.currency.symbol !== 'WBX' && (!$rootScope.currency.tickers || !$rootScope.currency.tickers.WBX || !$rootScope.currency.tickers.WBX[$rootScope.currency.symbol])) {
+            console.log ('Currency ' + $rootScope.currency.symbol + ' not available, fallback to WBX');
+            $rootScope.currency.symbol = 'WBX';
         }
     };
 

@@ -60,16 +60,16 @@ angular.module('bpl_explorer')
         var lisk = liskFilter (amount),
             factor = 1;
 
-        if (currency.tickers && currency.tickers.BPL && currency.tickers.BPL[currency.symbol]) {
-          factor = currency.tickers.BPL[currency.symbol];
-        } else if (currency.symbol !== 'BPL') {
+        if (currency.tickers && currency.tickers.WBX && currency.tickers.WBX[currency.symbol]) {
+          factor = currency.tickers.WBX[currency.symbol];
+        } else if (currency.symbol !== 'WBX') {
           // Exchange rate not available for current symbol
           return 'N/A';
         }
 
         if (decimal_places === undefined) {
           switch (currency.symbol) {
-            case 'BPL':
+            case 'WBX':
               return numberFilter ((lisk * factor), 2).replace (/\.?0+$/, '');
             case 'BTC':
               return numberFilter ((lisk * factor), 2).replace (/\.?0+$/, '');
@@ -97,7 +97,7 @@ angular.module('bpl_explorer')
           if (isNaN(height)) {
               return 0;
           } else {
-              return Math.floor(height / 201) + (height % 201 > 0 ? 1 : 0);
+              return Math.floor(height / 51) + (height % 51 > 0 ? 1 : 0);
           }
       };
   })
@@ -127,11 +127,16 @@ angular.module('bpl_explorer')
           return moment(epochStampFilter(timestamp)).fromNow();
       };
   })
+
   .filter('timeSpan', function (epochStampFilter) {
       return function (a, b) {
-          return moment.duration(
-              epochStampFilter(a) - epochStampFilter(b)
-          ).humanize();
+        if (b > 0){
+          var val = epochStampFilter(a) - epochStampFilter(b);
+        }
+        else {
+          var val =  86400000;
+        }
+          return moment.duration(val).humanize();
       };
   })
   .filter('timestamp', function (epochStampFilter) {

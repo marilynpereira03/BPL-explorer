@@ -980,8 +980,21 @@ a.v_highlight_more {
   font-weight: 200;
   font-size: 24px;
   line-height: 32px;
+  /*color: #2ab573;*/
+}
+.volume-amount .ng-binding{
+  color: #2ab573; 
 }
 
+.big-details a {
+    color: #2ab573;
+}
+.text-muted{
+  color: #2ab573;
+}
+.ng-scope a {
+  color: #2ab573;
+}
 /* Fades */
 
 .fadein {
@@ -10696,7 +10709,11 @@ a:hover {
     }
 }
 .ellipsis {
-    text-overflow: ellipsis
+    text-overflow: ellipsis;
+    color: #2ab573;
+}
+.text-right .hidden-xs .hidden-sm a{
+  color: #2ab573;
 }
 .line20 {
     border: 1px solid #D4D4D4;
@@ -11189,7 +11206,8 @@ a.v_highlight_more {
 .big-info p.big-details {
     font-weight: 200;
     font-size: 24px;
-    line-height: 32px
+    line-height: 32px;
+    /*color: #2ab573;*/
 }
 .fadein {
     opacity: 0;

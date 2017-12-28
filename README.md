@@ -1,4 +1,4 @@
-# BlockPool Blockchain Explorer
+# WBX Blockchain Explorer
 
 BPL Explorer version 0.2.0 works in conjunction with the BPL Core API. It uses Redis for caching data and Freegeoip to parse IP geo-location data.
 
