@@ -36,10 +36,10 @@ h1>small {
   white-space: nowrap;
 }
 
-a {
+/*a {
   color: #2ab573 !important;
   text-decoration: none;
-}
+}*/
 
 a:hover {
   color: #f57c00;
