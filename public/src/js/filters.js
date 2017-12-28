@@ -17,7 +17,7 @@ angular.module('bpl_explorer')
   .filter('epochStamp', function () {
       return function (d) {
           return new Date(
-              (((Date.UTC(1970,01,01,01,0,0,0) / 1000) + d) * 1000)
+              (((Date.UTC(1970, 0, 1, 0, 0, 0, 0) / 1000) + d) * 1000)
           );
       };
   })

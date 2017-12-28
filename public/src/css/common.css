@@ -492,22 +492,20 @@ a:hover {
 }
 
 .btn-primary, a.btn-primary {
-  color: #fff;
+  color: #fff !important;
   background-color: #2ab573;
   border-color: #2ab573;
 }
 
 .btn-primary:focus,
 .btn-primary.focus {
-  color: #fff;
+  color: #fff !important;
   background-color: #2ab573;
   border-color: #2ab573;
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #0299eb;
-  border-color: #0299eb;
 }
 
 .btn-primary:active,
