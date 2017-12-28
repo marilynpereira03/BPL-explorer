@@ -1,5 +1,6 @@
 'use strict';
 
+
 var ForgingMonitor = function (forgingStatus) {
     this.getStatus = function (delegate) {
         return forgingStatus(delegate);
