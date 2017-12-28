@@ -9,8 +9,8 @@ config.host = '0.0.0.0'; // Interface to listen on, 0.0.0.0 to listen on all ava
 config.port = 9031;      // Port to listen on
 
 // BPL node
-config.bpl.host = '13.56.163.57';
-config.bpl.port = 9030;
+config.bpl.host = '165.227.224.117';
+config.bpl.port = 9032;
 
 // FreeGeoIP server
 config.freegeoip.host = '127.0.0.1';
@@ -24,7 +24,7 @@ config.redis.password = '';
 config.cacheTTL = 20; // Time in seconds to store cache in Redis
 
 // Header price tickers, Currency switcher
-config.exchangeRates.enabled = true;         // Exchange rates support (true - enabled, false - disabled)
+config.exchangeRates.enabled = false;         // Exchange rates support (true - enabled, false - disabled)
 config.exchangeRates.updateInterval = 30000; // Interval in ms for checking exchange rates (default: 30 seconds)
 // Configuration for different currency pairs, set false to disable pair
 config.exchangeRates.exchanges.BPL.BTC = 'bittrex';  // BPL/BTC pair, supported: poloniex
@@ -34,8 +34,8 @@ config.exchangeRates.exchanges.BTC.EUR = 'bitstamp';  // BTC/EUR pair, supported
 config.exchangeRates.exchanges.BTC.PLN = 'bitmarket'; // BTC/PLN pair, supported: bitmarket
 
 // Market watcher
-config.marketWatcher.enabled = true; // Market watcher support (true - enabled, false - disabled)
-config.marketWatcher.exchanges.poloniex = true; // Poloniex exchange support (true - enabled, false - disabled)
+config.marketWatcher.enabled = false; // Market watcher support (true - enabled, false - disabled)
+config.marketWatcher.exchanges.poloniex = false; // Poloniex exchange support (true - enabled, false - disabled)
 config.marketWatcher.exchanges.bittrex  = false; // Bittrex exchange support (true - enabled, false - disabled)
 config.marketWatcher.candles.updateInterval = 30000; // Interval in ms for updating candlestick data (default: 30 seconds)
 config.marketWatcher.orders.updateInterval  = 15000;  // Interval in ms for updating order book data (default: 15 seconds)
