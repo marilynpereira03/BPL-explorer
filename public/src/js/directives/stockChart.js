@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('bpl_explorer.tools')
+angular.module('explorer.tools')
   .directive('stockChart', function ($timeout) {
       function StockChart (scope, elm, attr) {
           var self = this;

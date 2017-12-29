@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('bpl_explorer.search').controller('SearchController',
+angular.module('explorer.search').controller('SearchController',
   function ($scope, $routeParams, $location, $timeout, Global, $http) {
       $scope.loading = false;
       $scope.badQuery = false;

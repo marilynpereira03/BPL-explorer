@@ -1,5 +1,5 @@
 {
-  "name": "bpl-explorer",
+  "name": "explorer",
   "version": "0.0.2",
   "dependencies": {
     "angular": "~1.5.8",

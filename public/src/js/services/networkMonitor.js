@@ -257,7 +257,7 @@ var NetworkMap = function () {
     };
 };
 
-angular.module('bpl_explorer.tools').factory('networkMonitor',
+angular.module('explorer.tools').factory('networkMonitor',
   function ($socket) {
       return function ($scope) {
           var networkMonitor = new NetworkMonitor($scope),

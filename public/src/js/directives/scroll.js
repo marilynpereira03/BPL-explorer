@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('bpl_explorer')
+angular.module('explorer')
   .directive('scroll', function ($window) {
       return function (scope, element, attrs) {
           angular.element($window).bind('scroll', function () {

@@ -39,7 +39,7 @@ var Header = function ($rootScope) {
     };
 };
 
-angular.module('bpl_explorer.system').factory('header',
+angular.module('explorer.system').factory('header',
   function ($rootScope, $socket) {
       return function ($scope) {
           var header = new Header($rootScope),

@@ -107,7 +107,7 @@ var DelegateMonitor = function ($scope, $rootScope, forgingMonitor) {
     };
 };
 
-angular.module('bpl_explorer.tools').factory('delegateMonitor',
+angular.module('explorer.tools').factory('delegateMonitor',
   function ($socket, $rootScope, forgingMonitor) {
       return function ($scope) {
           var delegateMonitor = new DelegateMonitor($scope, $rootScope, forgingMonitor),

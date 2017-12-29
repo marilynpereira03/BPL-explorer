@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('bpl_explorer.system').value('txTypes', {
+angular.module('explorer.system').value('txTypes', {
     0 : 'Normal transaction',
     1 : 'Second signature creation',
     2 : 'Delegate registration',

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('bpl_explorer',[
+angular.module('explorer',[
     'ngAnimate',
     'ngResource',
     'ngRoute',
@@ -8,21 +8,21 @@ angular.module('bpl_explorer',[
     'ui.bootstrap',
     'gettext',
     'monospaced.qrcode',
-    'bpl_explorer.system',
-    'bpl_explorer.socket',
-    'bpl_explorer.blocks',
-    'bpl_explorer.transactions',
-    'bpl_explorer.address',
-    'bpl_explorer.search',
-    'bpl_explorer.tools',
-    'bpl_explorer.currency'
+    'explorer.system',
+    'explorer.socket',
+    'explorer.blocks',
+    'explorer.transactions',
+    'explorer.address',
+    'explorer.search',
+    'explorer.tools',
+    'explorer.currency'
 ]);
 
-angular.module('bpl_explorer.system', []);
-angular.module('bpl_explorer.socket', []);
-angular.module('bpl_explorer.blocks', []);
-angular.module('bpl_explorer.transactions', []);
-angular.module('bpl_explorer.address', []);
-angular.module('bpl_explorer.search', []);
-angular.module('bpl_explorer.tools', ['naturalSort']);
-angular.module('bpl_explorer.currency', []);
+angular.module('explorer.system', []);
+angular.module('explorer.socket', []);
+angular.module('explorer.blocks', []);
+angular.module('explorer.transactions', []);
+angular.module('explorer.address', []);
+angular.module('explorer.search', []);
+angular.module('explorer.tools', ['naturalSort']);
+angular.module('explorer.currency', []);

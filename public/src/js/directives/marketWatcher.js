@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('bpl_explorer.tools')
+angular.module('explorer.tools')
   .directive('orders', function () {
       return {
           restrict: 'E',

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('bpl_explorer.system').factory('blockTxs',
+angular.module('explorer.system').factory('blockTxs',
   function ($http, $q) {
       return function (blockId) {
           var lessMore = new LessMore($http, $q, {

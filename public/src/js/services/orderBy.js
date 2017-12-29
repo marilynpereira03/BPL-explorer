@@ -10,7 +10,7 @@ var OrderBy = function (predicate) {
     };
 };
 
-angular.module('bpl_explorer.system').factory('orderBy',
+angular.module('explorer.system').factory('orderBy',
   function () {
       return function (predicate) {
           return new OrderBy(predicate);

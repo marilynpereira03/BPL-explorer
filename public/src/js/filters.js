@@ -4,7 +4,7 @@ function smallId(fullId) {
   return fullId.slice(0, 5) + '...' + fullId.slice(-5)
 }
 
-angular.module('bpl_explorer')
+angular.module('explorer')
   .filter('approval', function () {
       return function (votes) {
           if (isNaN(votes)) {
@@ -131,14 +131,18 @@ angular.module('bpl_explorer')
   .filter('timeSpan', function (epochStampFilter) {
       return function (a, b) {
         if (b > 0){
-          var val = epochStampFilter(a) - epochStampFilter(b);
+          return moment.duration(epochStampFilter(a) - epochStampFilter(b)).humanize();
         }
         else {
-          var val =  86400000;
+          return moment.duration(86400000).humanize();
         }
-          return moment.duration(val).humanize();
       };
   })
+  // .filter('timeSpan', function (epochStampFilter) {
+  //     return function (a, b) {
+  //         return moment.duration(epochStampFilter(a) - epochStampFilter(b)).humanize();
+  //     };
+  // })
   .filter('timestamp', function (epochStampFilter) {
       return function (timestamp) {
           var d     = epochStampFilter(timestamp);
