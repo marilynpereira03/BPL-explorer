@@ -309,7 +309,7 @@ module.exports = function (app, connectionHandler, socket) {
     };
 
     var getRound = function (height) {
-        return Math.floor(height / app.get('delegate')) + (height % app.get('delegates') > 0 ? 1 : 0);
+        return Math.floor(height / 51) + (height % 51 > 0 ? 1 : 0);
     };
 
     var getRoundDelegates = function (delegates, height) {
