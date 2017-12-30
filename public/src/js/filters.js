@@ -134,10 +134,21 @@ angular.module('explorer')
           return moment.duration(epochStampFilter(a) - epochStampFilter(b)).humanize();
         }
         else {
-          return moment.duration(86400000).humanize();
+          return moment.duration((new Date().setDate(new Date().getDate() + 1)) - new Date()).humanize();
         }
       };
   })
+  // .filter('timeSpan', function (epochStampFilter) {
+  //     return function (a, b) {
+  //       if (b > 0){
+  //         return moment.duration(epochStampFilter(a) - epochStampFilter(b)).humanize();
+  //       }
+  //       else {
+  //         timestamp = new Date(Date.now())
+  //         return n
+  //       }
+  //     };
+  // })
   // .filter('timeSpan', function (epochStampFilter) {
   //     return function (a, b) {
   //         return moment.duration(epochStampFilter(a) - epochStampFilter(b)).humanize();
