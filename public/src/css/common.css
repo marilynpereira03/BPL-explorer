@@ -278,7 +278,7 @@ a:hover {
 .nav-tabs.nav-justified>.active>a,
 .nav-tabs.nav-justified>.active>a:focus {
   color: white;
-  background-color: #5b5b5b;
+  background-color: #2ab573;
 }
 
 .nav-tabs.nav-justified>.active>a:hover {
@@ -326,7 +326,9 @@ a:hover {
   padding-top: 22px;
   padding-bottom: 22px;
 }
-
+.a {
+  color: #2ab573 !important;
+}
 #search-form { color: #5f696e; }
 
 #search-form #search { 
@@ -989,9 +991,9 @@ a.v_highlight_more {
 .big-details a {
     color: #2ab573;
 }
-.text-muted{
+/*.text-muted{
   color: #2ab573;
-}
+}*/
 .ng-scope a {
   color: #2ab573;
 }
@@ -4997,7 +4999,7 @@ textarea.input-group-sm>.input-group-btn>.btn {
 .nav>li>a:focus,
 .nav>li>a:hover {
     text-decoration: none;
-    background-color: #eee
+    background-color: #383838 !important;
 }
 .nav>li.disabled>a {
     color: #777
@@ -10709,11 +10711,10 @@ a:hover {
 }
 .ellipsis {
     text-overflow: ellipsis;
-    color: #2ab573;
 }
-.text-right .hidden-xs .hidden-sm a{
+/*.text-right .hidden-xs .hidden-sm a{
   color: #2ab573;
-}
+}*/
 .line20 {
     border: 1px solid #D4D4D4;
     margin-bottom: 15px
@@ -11328,12 +11329,13 @@ a.sort-order span.reverse:after {
 .nav-pills>li.active>a:focus,
 .nav-pills>li.active>a:hover {
     color: #fff !important;
-    background-color: #5b5b5b
+    background-color: #2ab573 !important;
 }
 .nav-pills>li>a,
 .nav-pills>li>a:focus,
 .nav-pills>li>a:hover {
     color: #fff !important;
+    background-color: #5b5b5b;
 }
 .nav-pills>li {
     width: 49%
@@ -12223,21 +12225,24 @@ div.versions div.version {
     padding-right: 30px
 }
 div.versions span.version-num {
-    padding: 0 3px;
+    padding: 0 10px 0 10px;
     background-color: #35393B
 }
 div.heights span.counter,
 div.versions span.counter {
-    padding: 3px;
+    padding: 10px;
     border-radius: 10px;
-    background-color: #E8E8E9
+    background-color: #5b5b5b;
+    color: #fff;
+
 }
 div.heights span.height-num {
     background-color: #35393b;
-    padding: 0 3px
+    padding: 0px 10px 0px 10px;
 }
 div.heights span.height-best {
-    background-color: green
+    background-color: #2ab573;
+    padding: 0px 10px 0px 10px;
 }
 @media (max-width: 1200px) {
     div.versions div.version {
