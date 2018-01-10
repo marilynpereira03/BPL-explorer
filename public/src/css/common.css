@@ -176,6 +176,9 @@ a:hover {
     margin-right: 0px;
   }
 }
+.ng-isolate-scope > a:hover{
+  color:#fff !important;
+}
 
 .navbar { min-height: 80px; }
 
