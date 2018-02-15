@@ -2716,7 +2716,7 @@ pre code {
 }
 @media (min-width: 1200px) {
     .container {
-        width: 1170px
+        width: 1260px !important
     }
 }
 .row {
@@ -10776,8 +10776,8 @@ a.btn-primary {
 }*/
 .btn-primary:hover {
     color: #fff;
-    background-color: #0299eb;
-    border-color: #0299eb
+    background-color: #2b6b49!important;
+    border-color: #2b6b49!important
 }
 /*.btn-primary.active,
 .btn-primary.active.focus,
