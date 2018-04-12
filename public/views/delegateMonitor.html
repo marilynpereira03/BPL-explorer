@@ -279,6 +279,7 @@
                   <th class="hidden-xs hidden-sm"><a href="" data-ng-click="tables.active.order('forgingTime')" class="sort-order">Forging time <span data-ng-show="tables.active.predicate === 'forgingTime'" data-ng-class="{reverse:tables.active.reverse}"></span></a></th>
                   <th><a href="" data-ng-click="tables.active.order('status')" class="sort-order">Status <span data-ng-show="tables.active.predicate === 'forgingStatus.rating'" data-ng-class="{reverse:tables.active.reverse}"></span></a></th>
                   <th><a href="" data-ng-click="tables.active.order('productivity')" class="sort-order">Productivity <span data-ng-show="tables.active.predicate === 'productivity'" data-ng-class="{reverse:tables.active.reverse}"></span></a></th>
+                  <th><a href="" data-ng-click="tables.active.order('reliability')" class="sort-order">Reliability <span data-ng-show="tables.active.predicate === 'reliability'" data-ng-class="{reverse:tables.active.reverse}"></span></a></th>
                   <th class="hidden-xs"><a href="" data-ng-click="tables.active.order('vote')" class="sort-order">Approval <span data-ng-show="tables.active.predicate === 'vote'" data-ng-class="{reverse:tables.active.reverse}"></span></a></th>
                 </tr>
               </thead>
@@ -296,6 +297,7 @@
                   <td class="hidden-xs hidden-sm">{{d.forgingTime | forgingTime}}</td>
                   <td><i forging-status="d.forgingStatus"></i></td>
                   <td>{{d.productivity || 0}}%</td>
+                  <td>{{d.reliability || 0}}%</td>
                   <td class="hidden-xs"><span tooltip="{{d.vote | currency:currency}} {{currency.symbol}}">{{d.approval}}%</span></td>
                 </tr>
               </tbody>
