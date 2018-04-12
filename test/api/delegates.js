@@ -95,7 +95,8 @@ describe('Delegates API', function() {
             'producedblocks',
             'missedblocks',
             'rate',
-            'approval'
+            'approval',
+            'reliability'
         );
     }
 

@@ -73,7 +73,8 @@ describe('Blocks API', function() {
             'producedblocks',
             'missedblocks',
             'rate',
-            'approval'
+            'approval',
+            'reliability'
         );
     }
 
