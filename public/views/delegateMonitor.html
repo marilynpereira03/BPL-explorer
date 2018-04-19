@@ -313,6 +313,7 @@
                   <th><a href="" data-ng-click="tables.standby.order('username')" class="sort-order">Name <span data-ng-show="tables.standby.predicate === 'username'" data-ng-class="{reverse:tables.standby.reverse}"></span></a></th>
                   <th class="hidden-xs"><a href="" data-ng-click="tables.standby.order('address')" class="sort-order">Address <span data-ng-show="tables.standby.predicate === 'address'" data-ng-class="{reverse:tables.standby.reverse}"></span></a></th>
                   <th class="hidden-xs"><a href="" data-ng-click="tables.standby.order('productivity')" class="sort-order">Productivity <span data-ng-show="tables.standby.predicate === 'productivity'" data-ng-class="{reverse:tables.standby.reverse}"></span></a></th>
+                  <th class="hidden-xs"><a href="" data-ng-click="tables.standby.order('reliability')" class="sort-order">Reliability <span data-ng-show="tables.standby.predicate === 'reliability'" data-ng-class="{reverse:tables.standby.reverse}"></span></a></th>
                   <th class="hidden-xs"><a href="" data-ng-click="tables.standby.order('vote')" class="sort-order">Approval <span data-ng-show="tables.standby.predicate === 'vote'" data-ng-class="{reverse:tables.standby.reverse}"></span></a></th>
                 </tr>
               </thead>
@@ -327,6 +328,7 @@
                   <td><a data-ng-if="d.proposal" class="glyphicon glyphicon-user proposal-icon" data-ng-href="https://forum.lisk.io/viewtopic.php?f=48&t={{d.proposal.topic}}" title="{{d.proposal.description}}" target="_new"></a> <a data-ng-href="/address/{{d.address}}">{{d.username}}</a></td>
                   <td class="hidden-xs"><span class="text-muted">{{d.address}}</span></td>
                   <td class="hidden-xs">{{d.productivity || 0}}%</td>
+                  <td class="hidden-xs">{{d.reliability || 0}}%</td>
                   <td class="hidden-xs"><span tooltip="{{d.vote | currency:currency}} {{currency.symbol}}">{{d.approval}}%</span></td>
                 </tr>
               </tbody>
