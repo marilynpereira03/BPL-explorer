@@ -90,9 +90,9 @@ To enable Top Accounts functionality, start your bpl node (not the explorer) usi
 TOP=true node app.js
 ```
 
-## Managing Bpl Explorer
+## Managing BPL Explorer
 
-To test that Ark Explorer is configured correctly, run the following command:
+To test that BPL Explorer is configured correctly, run the following command:
 
 `node app.js`
 
@@ -112,21 +112,21 @@ To stop Explorer after it has been started with `forever`, issue the following c
 
 ## Tests
 
-Before running any tests, please ensure Bpl Explorer and Bpl Client are configured to run on the Bpl Testnet.
+Before running any tests, please ensure BPL Explorer and BPL Client are configured to run on the BPL Testnet.
 
 Replace **config.js** with **config.test** file from the **test** directory:
 
 `cp test/config.test ./config.js`
 
-Replace the **config.json** for the Bpl Client the corresponding file under the **test** directory:
+Replace the **config.json** for the BPL Client the corresponding file under the **test** directory:
 
-`cp test/config_Bpl.json  /PATH_TO_Bpl_DIR/config.json`
+`cp test/config_bpl.json  /PATH_TO_BPL_DIR/config.json`
 
-Then restart the Bpl Client (example):
+Then restart the BPL Client (example):
 
-`bash /PATH_TO_Bpl_DIR/Bpl.sh reload`
+`bash /PATH_TO_BPL_DIR/BPL.sh reload`
 
-Launch Bpl Explorer (runs on port 6040):
+Launch BPL Explorer (runs on port 6040):
 
 `forever start app.js`
 
