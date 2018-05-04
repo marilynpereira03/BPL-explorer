@@ -1,6 +1,5 @@
 {
     "address" : { "owner" : "owner", "description" : "description" },
-    "AUexKjGtgsSpVzPLs6jNMM6vJ6znEVTQWK" : { "owner" : "Bittrex", "description" : "Main Wallet" },
-    "AJbmGnDAx9y91MQCDApyaqZhn6fBvYX9iJ" : { "owner" : "Cryptopia", "description" : "Main Wallet" },
-    "AN7BURQn5oqBRBADeWhmmUMJGQTy5Seey3" : { "owner" : "ARK Team", "description" : "" }
+    "BBkdB21btF8bW3ReVc6b67KQkssKnnBeMd" : { "owner" : "Cryptopia", "description" : "Main Wallet" },
+    "BDeeUQvZ61ErcpzjdUCTmwtxJcTg13HQYs" : { "owner" : "BLOCKPOOL", "description" : "TEC Distribution Wallet" }
 }
