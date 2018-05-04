@@ -1,5 +1,6 @@
 {
     "address" : { "owner" : "owner", "description" : "description" },
+    "B8schQu51ox9yDVf9oyNzD98wLQb8PzG4N" : { "owner" : "COSS", " description" : "Main Wallet" },
     "BBkdB21btF8bW3ReVc6b67KQkssKnnBeMd" : { "owner" : "Cryptopia", "description" : "Main Wallet" },
     "BDeeUQvZ61ErcpzjdUCTmwtxJcTg13HQYs" : { "owner" : "BLOCKPOOL", "description" : "TEC Distribution Wallet" }
 }
