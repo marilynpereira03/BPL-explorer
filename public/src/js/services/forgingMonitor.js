@@ -1,6 +1,6 @@
 'use strict';
 
-var config = require('../config.json');
+
 var ForgingMonitor = function (forgingStatus) {
     this.getStatus = function (delegate) {
         return forgingStatus(delegate);
@@ -43,9 +43,9 @@ var ForgingMonitor = function (forgingStatus) {
             unprocessed += totals.staleStatus || 0;
 
         if (unprocessed > 0) {
-            return (config.delegates - unprocessed);
+            return (51 - unprocessed);
         } else {
-            return config.delegates;
+            return 51;
         }
     };
 };
