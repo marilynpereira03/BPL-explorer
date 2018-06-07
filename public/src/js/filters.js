@@ -129,9 +129,12 @@ angular.module('bpl_explorer')
   })
   .filter('timeSpan', function (epochStampFilter) {
       return function (a, b) {
-          return moment.duration(
-              epochStampFilter(a) - epochStampFilter(b)
-          ).humanize();
+        if (b > 0){
+          return moment.duration(epochStampFilter(a) - epochStampFilter(b)).humanize();
+        }
+        else {
+          return moment.duration((new Date().setDate(new Date().getDate() + 1)) - new Date()).humanize();
+        }
       };
   })
   .filter('timestamp', function (epochStampFilter) {
