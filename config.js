@@ -5,12 +5,12 @@ var config = require('./config.global');
 // CONFIGURATION
 // =======================================================================================
 
-config.host = 'ec2-52-66-184-223.ap-south-1.compute.amazonaws.com'; // Interface to listen on, 0.0.0.0 to listen on all available
-config.port = 9029;      // Port to listen on
+config.host = 'ec2-13-115-69-210.ap-northeast-1.compute.amazonaws.com'; // Interface to listen on, 0.0.0.0 to listen on all available
+config.port = 9033;      // Port to listen on
 
 // BPL node
-config.bpl.host = '52.66.184.223';
-config.bpl.port = 9028;
+config.bpl.host = '13.115.69.210';
+config.bpl.port = 9032;
 
 // FreeGeoIP server
 config.freegeoip.host = '127.0.0.1';

@@ -56,6 +56,7 @@ angular.module('bpl_explorer')
       };
   })
   .filter('currency', function (numberFilter, liskFilter) {
+    var decimal_places = 4;
       return function (amount, currency, decimal_places) {
         var lisk = liskFilter (amount),
             factor = 1;
@@ -70,11 +71,11 @@ angular.module('bpl_explorer')
         if (decimal_places === undefined) {
           switch (currency.symbol) {
             case 'BPL':
-              return numberFilter ((lisk * factor), 2).replace (/\.?0+$/, '');
+              return numberFilter ((lisk * factor), 4).replace (/\.?0+$/, '');
             case 'BTC':
-              return numberFilter ((lisk * factor), 2).replace (/\.?0+$/, '');
+              return numberFilter ((lisk * factor), 4).replace (/\.?0+$/, '');
             default:
-              return numberFilter ((lisk * factor), 2).replace (/\.?0+$/, '');
+              return numberFilter ((lisk * factor), 4).replace (/\.?0+$/, '');
           }
         } else {
           return numberFilter ((lisk * factor), decimal_places);
@@ -97,7 +98,7 @@ angular.module('bpl_explorer')
           if (isNaN(height)) {
               return 0;
           } else {
-              return Math.floor(height / 201) + (height % 201 > 0 ? 1 : 0);
+              return Math.floor(height / 51) + (height % 51 > 0 ? 1 : 0);
           }
       };
   })
