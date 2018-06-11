@@ -1,6 +1,6 @@
 'use strict';
 
-var ForgingMonitor = function (forgingStatus) {
+var ForgingMonitor = function (forgingStatus, $http) {
     this.getStatus = function (delegate) {
         return forgingStatus(delegate);
     };
@@ -40,16 +40,17 @@ var ForgingMonitor = function (forgingStatus) {
     this.getForgingProgress = function (totals) {
         var unprocessed  = totals.unprocessed || 0;
             unprocessed += totals.staleStatus || 0;
-
-        if (unprocessed > 0) {
-            return (51 - unprocessed);
-        } else {
-            return 51;
-        }
+        $http.get('../../../constants.json').success(function (data){
+         if (unprocessed > 0) {
+              return (data.delegates - unprocessed);
+          } else {
+              return data.delegates;
+          }
+        });
     };
 };
 
 angular.module('bpl_explorer.tools').service('forgingMonitor',
-  function (forgingStatus) {
-      return new ForgingMonitor(forgingStatus);
+  function (forgingStatus, $http) {
+  return new ForgingMonitor(forgingStatus,$http);
   });

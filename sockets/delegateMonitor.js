@@ -4,6 +4,7 @@ var api = require('../lib/api'),
     moment = require('moment'),
     _ = require('underscore'),
     async = require('async'),
+    constants = require('../public/constants.json'),
     request = require('request');
 
 module.exports = function (app, connectionHandler, socket) {
@@ -309,7 +310,7 @@ module.exports = function (app, connectionHandler, socket) {
     };
 
     var getRound = function (height) {
-        return Math.floor(height / 51) + (height % 51 > 0 ? 1 : 0);
+        return Math.floor(height / constants.delegates) + (height % constants.delegates > 0 ? 1 : 0);
     };
 
     var getRoundDelegates = function (delegates, height) {

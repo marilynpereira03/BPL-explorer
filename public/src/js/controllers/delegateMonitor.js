@@ -30,7 +30,7 @@ angular.module('bpl_explorer.tools').controller('DelegateMonitor',
       };
 
       $scope.getStandby(1);
-
+      $scope.delegates = $rootScope.delegates;
       $scope.tables = {
           active : orderBy('rate'),
           standby : orderBy('rate')

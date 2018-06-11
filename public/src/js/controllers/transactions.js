@@ -17,6 +17,6 @@ angular.module('bpl_explorer.transactions').controller('TransactionsController',
               $location.path('/');
           });
       };
-
+      $scope.delegates =  $rootScope.delegates;
       $scope.getTransaction();
   });

@@ -29,5 +29,6 @@ angular.module('bpl_explorer.address').controller('AddressController',
 		};
 
 		$scope.getAddress();
+		$scope.delegates = $rootScope.delegates;
 		$scope.txs = addressTxs($routeParams.address);
 	});

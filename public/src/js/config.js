@@ -60,6 +60,11 @@ angular.module('bpl_explorer')
       $rootScope.$on('$routeChangeStart', function () {
           ngProgress.start();
       });
+      // Number of active delegate Change
+      $http.get('../../constants.json').success(function (data){
+        $rootScope.delegates = data.delegates;
+  	});
+
 
       $rootScope.$on('$routeChangeSuccess', function () {
           ngProgress.complete();

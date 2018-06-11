@@ -93,12 +93,14 @@ angular.module('bpl_explorer')
           }
       };
   })
-  .filter('round', function () {
+  .filter('round', function ($http) {
       return function (height) {
           if (isNaN(height)) {
               return 0;
           } else {
-              return Math.floor(height / 51) + (height % 51 > 0 ? 1 : 0);
+            $http.get('../../constants.json').success(function (data){
+             return Math.floor(height / data.delegates) + (height % data.delegates > 0 ? 1 : 0);
+          });
           }
       };
   })
